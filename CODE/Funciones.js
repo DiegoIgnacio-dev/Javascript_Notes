@@ -75,6 +75,55 @@ usuario.alerta(autorizacion);
 usuario.acceso(autorizacion);
 usuario.mostrarNombre();
 
+//CONTROLANDO ITERACIONES IF CON FUNCIONES
+
+//por ejemplo
+
+let puntaje = 500;
+//en este caso ambas condiciones cumplirian con la condicion pero por logica solo se ejecuta uno
+
+if(puntaje > 450){
+    console.log("exelente")
+}else if(puntaje > 300){
+    console.log("bien buen Puntaje")
+}
+//tambien se podria omitir el else if generandso un codigo mas limpio cumpliendose ambas condiciones
+
+if(puntaje > 450){
+    console.log("exelente")
+}
+if(puntaje > 300){
+    console.log("bien buen Puntaje")
+}
+//para controlar esto podemos usar una funcion que retorne una de las condiciones 
+
+const resultado=(puntaje)=>{
+    if(puntaje > 450){
+        console.log("exelente")
+        return;
+    }
+    if(puntaje > 300){
+        console.log("bien buen Puntaje")
+        return;
+    } 
+}
+
+resultado(puntaje);
+
+
+//operador ternario dato ? true : false
+let opcion = false;
+
+console.log(opcion ? 'es verdadero' : 'es falso')
+
+let num=600;
+
+console.log(num>500 ? 'el numero es mayor':'El numero es menor')
+
+let edad=17;
+let registro = true;
+
+console.log(edad>=18 && registro==true ? 'Acceso autorizado':'No autorizado')
 
 
 
