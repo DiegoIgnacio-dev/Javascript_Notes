@@ -16,4 +16,29 @@ function solicitud_Validada(){
 
 inicio_Sesion();
 
+let totalVenta= 0;
+//con esta funcion hacemos que el parametro precio se sume en total venta cada vez llamamos a la funcion
+
+function CarroCompras(precio){
+    totalVenta +=  precio;
+    return totalVenta;
+}
+
+let Total = CarroCompras(100);
+Total= CarroCompras(200);
+Total= CarroCompras(600);
+Total = CarroCompras(1000);
+
+//Funcion que tomara el retorno de la primera funcion y le aplicara un impuesto
+
+function impuesto(Total){
+    return Total =Total + Total*0.19;
+}
+
+let ImpuestoChileno = impuesto(Total);  
+
+console.log(Total);
+
+console.log(ImpuestoChileno);
+
 
