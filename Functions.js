@@ -41,4 +41,40 @@ console.log(Total);
 
 console.log(ImpuestoChileno);
 
+//FUNCIONES EN OBJETOS
+
+const usuario={
+    nombre:"Diego",
+    apellido:"Avila",
+    alerta:function(acceso){
+        if(acceso == true){
+            console.log("Acceso autorizado");
+        }else{
+            console.log("Acceso Denegado");
+        }
+        return acceso;
+    },
+    acceso:function(acceso){
+        if(acceso==true){
+            console.log("session iniciada")
+        }else{
+            console.log("No es posible iniciar session");
+        }
+
+    },
+    mostrarNombre:function(){
+        console.log(`${usuario.nombre} ${usuario.apellido}`);
+    }
+
+    
+}
+
+let autorizacion = true;
+
+usuario.alerta(autorizacion);
+usuario.acceso(autorizacion);
+usuario.mostrarNombre();
+
+
+
 
